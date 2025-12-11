@@ -249,83 +249,220 @@
             margin-top: 30px;
         }
 
-        .result-item {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border: 1px solid #e0e0e0;
+        .bookmarklet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        .result-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
+        .bookmarklet-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
         }
 
-        .result-header h4 {
-            color: #333;
-            font-size: 16px;
-        }
-
-        .account-info {
+        .bookmarklet-table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
             font-size: 14px;
+        }
+
+        .bookmarklet-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .bookmarklet-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .bookmarklet-table tbody tr:hover {
+            background: #f8f9ff;
+        }
+
+        .account-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .account-id {
+            font-size: 13px;
             color: #666;
+            margin-top: 3px;
         }
 
         .code-box {
             background: #282c34;
             color: #abb2bf;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 8px;
+            border-radius: 6px;
             font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 12px;
+            font-size: 11px;
             overflow-x: auto;
-            margin-bottom: 10px;
             word-break: break-all;
             white-space: pre-wrap;
         }
 
-        .copy-btn {
+        /* 내보내기 버튼 */
+        .export-btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 15px;
+        }
+
+        .export-btn:hover {
+            background: #388e3c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        .bookmarklet-link {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #f0f2ff;
+            border: 2px dashed #667eea;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: move;
+            font-size: 13px;
+        }
+
+        .bookmarklet-link:hover {
+            background: #667eea;
+            color: white;
+            border-style: solid;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .small-copy-btn {
             background: #667eea;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 6px 12px;
             border-radius: 6px;
             cursor: pointer;
             font-weight: 600;
             transition: background 0.3s;
+            font-size: 13px;
         }
 
-        .copy-btn:hover {
+        .small-copy-btn:hover {
             background: #764ba2;
         }
 
-        .copy-btn.copied {
+        .small-copy-btn.copied {
             background: #4caf50;
         }
 
+
         .instructions {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            border-radius: 8px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
             margin-top: 30px;
         }
 
         .instructions h4 {
-            color: #856404;
-            margin-bottom: 10px;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: center;
         }
 
-        .instructions ol {
-            margin-left: 20px;
-            color: #856404;
+        .method-section {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            align-items: flex-start;
         }
 
-        .instructions li {
+        .method-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .method-content {
+            flex: 1;
+        }
+
+        .method-content strong {
+            color: #667eea;
+            display: block;
             margin-bottom: 5px;
+        }
+
+        .method-content p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .method-content code {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .tip-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .tip-box strong {
+            color: #1565c0;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .tip-box p {
+            color: #424242;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .tip-box code {
+            background: white;
+            color: #1976d2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
         }
 
         .error-message {
@@ -712,21 +849,47 @@
             <!-- 결과 영역 -->
             <div class="results" id="results"></div>
 
+            <!-- 내보내기 버튼 (결과 생성 후 표시) -->
+            <div id="exportSection" style="display: none; margin-top: 20px; text-align: center;">
+                <button class="export-btn" onclick="exportBookmarks()">
+                    📥 모든 북마크 HTML로 내보내기
+                </button>
+                <div style="margin-top: 10px; color: #666; font-size: 13px;">
+                    브라우저 설정 → 북마크 → 북마크 가져오기로 일괄 등록할 수 있습니다
+                </div>
+            </div>
+
             <!-- 사용 방법 -->
             <div class="instructions">
-                <h4>📌 북마크렛 사용 방법</h4>
-                <ol>
-                    <li>생성된 코드를 복사하세요</li>
-                    <li>브라우저 북마크바에서 우클릭 → "새 북마크 추가"</li>
-                    <li>이름: 계정 이름 입력 (예: "홍길동 계정")</li>
-                    <li>URL: 복사한 코드 붙여넣기</li>
-                    <li>저장 후 로그인 페이지에서 북마크 클릭!</li>
-                </ol>
-                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 14px;">
-                    <strong style="color: #667eea;">💡 HTML 파일 준비 Tip:</strong><br>
-                    로그인 페이지에서 <code style="background: #f0f2ff; padding: 2px 6px; border-radius: 4px; color: #667eea;">Ctrl+S</code>
-                    (Mac: <code style="background: #f0f2ff; padding: 2px 6px; border-radius: 4px; color: #667eea;">Cmd+S</code>)로
-                    간편하게 저장하세요!
+                <h4>📌 북마크 등록 3가지 방법</h4>
+
+                <div class="method-section">
+                    <div class="method-number">1</div>
+                    <div class="method-content">
+                        <strong>🖱️ 드래그 앤 드롭 (가장 쉬움!)</strong>
+                        <p>생성된 표에서 <code>📌 계정 이름</code> 링크를 브라우저 북마크바로 드래그</p>
+                    </div>
+                </div>
+
+                <div class="method-section">
+                    <div class="method-number">2</div>
+                    <div class="method-content">
+                        <strong>📥 HTML 파일로 일괄 등록</strong>
+                        <p><code>📥 모든 북마크 HTML로 내보내기</code> 버튼 클릭 → 브라우저 설정 → 북마크 가져오기 → 다운로드된 파일 선택</p>
+                    </div>
+                </div>
+
+                <div class="method-section">
+                    <div class="method-number">3</div>
+                    <div class="method-content">
+                        <strong>📋 코드 복사하여 수동 등록</strong>
+                        <p><code>📋 코드 복사</code> 버튼 → 북마크바 우클릭 → 새 북마크 추가 → URL에 붙여넣기</p>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <strong>💡 HTML 파일 준비 Tip</strong>
+                    <p>로그인 페이지에서 <code>Ctrl+S</code> (Mac: <code>Cmd+S</code>) 누르고 저장하면 끝!</p>
                 </div>
             </div>
         </div>
@@ -752,9 +915,9 @@
 
             <div style="margin-top: 30px; padding: 15px; background: #f8f9ff; border-radius: 8px; font-size: 13px; color: #666;">
                 <strong style="color: #667eea;">💡 Quick Tips</strong><br>
-                • HTML 저장: <code style="font-size: 11px;">Ctrl+S</code><br>
+                • 북마크 등록: 드래그가 제일 쉬워요!<br>
                 • 자동 감지 실패 → 🎯 직접 선택<br>
-                • 엑셀 또는 수동 입력 가능
+                • HTML 파일로 일괄 내보내기 가능
             </div>
         </aside>
     </div>
@@ -1144,30 +1307,59 @@
 
         function generateBookmarklets() {
             const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = '<h3 style="margin-bottom: 20px; color: #333;">생성된 북마크렛</h3>';
+            resultsDiv.innerHTML = `
+                <h3 style="margin-bottom: 15px; color: #333;">생성된 북마크렛</h3>
+                <div style="background: #e3f2fd; border-left: 4px solid #2196F3; padding: 12px; border-radius: 6px; margin-bottom: 20px; font-size: 13px; color: #1565c0;">
+                    <strong>🖱️ 사용법:</strong> 북마크 링크(📌)를 브라우저 북마크바로 드래그하거나, 코드 복사 버튼을 클릭하세요
+                </div>
+                <table class="bookmarklet-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">계정 정보</th>
+                            <th style="width: 35%;">북마크 드래그</th>
+                            <th style="width: 40%;">동작</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookmarkletTableBody">
+                    </tbody>
+                </table>
+            `;
 
             // 엑셀과 수동 입력 계정 병합
             const manualAccounts = getManualAccounts();
             const allAccounts = [...accountList, ...manualAccounts];
 
+            const tableBody = document.getElementById('bookmarkletTableBody');
+
             allAccounts.forEach((account, index) => {
                 const bookmarkletCode = createBookmarkletCode(account);
 
-                const resultItem = document.createElement('div');
-                resultItem.className = 'result-item';
-                resultItem.innerHTML = `
-                    <div class="result-header">
-                        <h4>${account.name}</h4>
-                        <span class="account-info">ID: ${account.id}</span>
-                    </div>
-                    <div class="code-box" id="code-${index}">${escapeHtml(bookmarkletCode)}</div>
-                    <button class="copy-btn" onclick="copyCode(${index}, '${account.name}')">
-                        📋 복사하기
-                    </button>
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <div class="account-name">${escapeHtml(account.name)}</div>
+                        <div class="account-id">ID: ${escapeHtml(account.id)}</div>
+                    </td>
+                    <td>
+                        <a href="${bookmarkletCode}" class="bookmarklet-link" draggable="true">
+                            📌 ${escapeHtml(account.name)}
+                        </a>
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="small-copy-btn" onclick="copyBookmarkletCode(${index}, '${escapeHtml(account.name)}', this)">
+                                📋 코드 복사
+                            </button>
+                        </div>
+                        <div class="code-box" id="code-${index}" style="display: none; margin-top: 10px; font-size: 11px; padding: 8px;">${escapeHtml(bookmarkletCode)}</div>
+                    </td>
                 `;
 
-                resultsDiv.appendChild(resultItem);
+                tableBody.appendChild(row);
             });
+
+            // 내보내기 버튼 표시
+            document.getElementById('exportSection').style.display = 'block';
         }
 
         function createBookmarkletCode(account) {
@@ -1212,6 +1404,73 @@
                     btn.classList.remove('copied');
                 }, 2000);
             });
+        }
+
+        // 목록형 북마크렛 코드 복사
+        function copyBookmarkletCode(index, accountName, btnElement) {
+            const codeElement = document.getElementById(`code-${index}`);
+            const code = codeElement.textContent;
+
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = btnElement.textContent;
+                btnElement.textContent = '✅ 복사됨!';
+                btnElement.classList.add('copied');
+
+                setTimeout(() => {
+                    btnElement.textContent = originalText;
+                    btnElement.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // 북마크 HTML 파일로 내보내기
+        function exportBookmarks() {
+            const manualAccounts = getManualAccounts();
+            const allAccounts = [...accountList, ...manualAccounts];
+
+            if (allAccounts.length === 0) {
+                alert('⚠️ 생성된 북마크렛이 없습니다.');
+                return;
+            }
+
+            // 북마크 HTML 형식 생성
+            const timestamp = Math.floor(Date.now() / 1000);
+            let bookmarksHTML = `<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<!-- This is an automatically generated file.
+     It will be read and overwritten.
+     DO NOT EDIT! -->
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Bookmarks</TITLE>
+<H1>Bookmarks</H1>
+<DL><p>
+    <DT><H3 ADD_DATE="${timestamp}" LAST_MODIFIED="${timestamp}">로그인 북마크렛</H3>
+    <DL><p>
+`;
+
+            // 각 계정별 북마크 추가
+            allAccounts.forEach(account => {
+                const bookmarkletCode = createBookmarkletCode(account);
+                const escapedName = escapeHtml(account.name);
+                bookmarksHTML += `        <DT><A HREF="${bookmarkletCode}" ADD_DATE="${timestamp}">${escapedName}</A>\n`;
+            });
+
+            bookmarksHTML += `    </DL><p>
+</DL><p>
+`;
+
+            // 파일 다운로드
+            const blob = new Blob([bookmarksHTML], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'login-bookmarklets.html';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+
+            // 성공 메시지
+            alert(`✅ 북마크 파일이 다운로드되었습니다!\n\n사용 방법:\n1. 브라우저 설정 → 북마크 → 북마크 가져오기\n2. 다운로드된 파일 선택\n3. 완료!`);
         }
 
         // ========== 수동 선택 모드 기능 ==========

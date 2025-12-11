@@ -353,31 +353,94 @@
                     </div>
 
                     <div class="step-card">
-                        <h4>STEP 4: 북마크렛 생성 및 복사</h4>
+                        <h4>STEP 4: 북마크렛 생성</h4>
                         <ol>
                             <li><span class="highlight">"북마크렛 생성하기"</span> 버튼 클릭</li>
-                            <li>각 계정별로 생성된 코드 확인</li>
-                            <li><span class="highlight">"📋 복사하기"</span> 버튼으로 코드 복사</li>
+                            <li>목록형 표로 북마크렛들이 생성됨</li>
                         </ol>
                     </div>
 
                     <div class="step-card">
-                        <h4>STEP 5: 브라우저 북마크에 저장</h4>
-                        <ol>
-                            <li>브라우저 북마크바에서 우클릭</li>
-                            <li><span class="highlight">"새 북마크 추가"</span> 또는 <span class="highlight">"페이지 추가"</span> 선택</li>
-                            <li><strong>이름:</strong> 계정 이름 입력 (예: "테스트 계정1")</li>
-                            <li><strong>URL:</strong> 복사한 북마크렛 코드 붙여넣기</li>
-                            <li>저장 클릭</li>
-                        </ol>
+                        <h4>STEP 5: 북마크 등록 (3가지 방법 중 선택)</h4>
+
+                        <h5 style="color: #667eea; margin-top: 15px;">방법 1: 드래그 앤 드롭 (추천!) 🖱️</h5>
+                        <ul>
+                            <li>표에서 <code>📌 계정 이름</code> 링크를 찾기</li>
+                            <li>링크를 브라우저 북마크바로 드래그</li>
+                            <li>끝! 가장 쉬운 방법입니다</li>
+                        </ul>
+
+                        <h5 style="color: #667eea; margin-top: 15px;">방법 2: HTML 파일로 일괄 등록 📥</h5>
+                        <ul>
+                            <li><span class="highlight">"📥 모든 북마크 HTML로 내보내기"</span> 버튼 클릭</li>
+                            <li><code>login-bookmarklets.html</code> 파일 다운로드</li>
+                            <li>브라우저 설정 → 북마크 → <span class="highlight">북마크 가져오기</span></li>
+                            <li>다운로드한 파일 선택</li>
+                            <li>모든 북마크가 한 번에 등록됩니다!</li>
+                        </ul>
+
+                        <h5 style="color: #667eea; margin-top: 15px;">방법 3: 코드 복사하여 수동 등록 📋</h5>
+                        <ul>
+                            <li><span class="highlight">"📋 코드 복사"</span> 버튼 클릭</li>
+                            <li>브라우저 북마크바에서 우클릭 → "새 북마크 추가"</li>
+                            <li>이름: 계정 이름 입력</li>
+                            <li>URL: 복사한 코드 붙여넣기</li>
+                            <li>저장</li>
+                        </ul>
                     </div>
 
                     <div class="step-card">
                         <h4>STEP 6: 사용하기</h4>
                         <ol>
                             <li>로그인 페이지로 이동</li>
-                            <li>저장한 북마크를 클릭</li>
+                            <li>등록한 북마크를 클릭</li>
                             <li>자동으로 ID/비밀번호가 입력되고 로그인됩니다! 🎉</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 북마크 등록 방법 상세 -->
+                <div class="tutorial-section">
+                    <h2>📌 북마크 등록 방법 상세 가이드</h2>
+
+                    <div class="step-card">
+                        <h4>🖱️ 방법 1: 드래그 앤 드롭 (가장 추천!)</h4>
+                        <p>가장 쉽고 빠른 방법입니다:</p>
+                        <ol>
+                            <li>북마크렛 생성 후 표에서 <span class="highlight">📌 계정 이름</span> 링크를 찾습니다</li>
+                            <li>링크를 클릭한 상태로 드래그합니다</li>
+                            <li>브라우저 북마크바로 드래그하여 놓습니다</li>
+                            <li>북마크가 자동으로 생성됩니다!</li>
+                        </ol>
+                        <div class="tip-box" style="margin-top: 15px;">
+                            <strong>💡 Tip</strong><br>
+                            브라우저 북마크바가 안 보이면 <code>Ctrl+Shift+B</code> (Mac: <code>Cmd+Shift+B</code>)로 표시/숨기기 가능
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h4>📥 방법 2: HTML 파일로 일괄 등록</h4>
+                        <p>여러 북마크를 한 번에 등록할 때 편리합니다:</p>
+                        <ol>
+                            <li>북마크렛 생성 후 <span class="highlight">"📥 모든 북마크 HTML로 내보내기"</span> 버튼 클릭</li>
+                            <li><code>login-bookmarklets.html</code> 파일이 자동으로 다운로드됩니다</li>
+                            <li>브라우저 설정 열기 (Chrome: ⋮ → 북마크 → 북마크 관리자)</li>
+                            <li>우측 상단 ⋮ → <span class="highlight">북마크 가져오기</span> 선택</li>
+                            <li>다운로드한 HTML 파일 선택</li>
+                            <li>"로그인 북마크렛" 폴더에 모든 북마크가 추가됩니다!</li>
+                        </ol>
+                    </div>
+
+                    <div class="step-card">
+                        <h4>📋 방법 3: 코드 복사하여 수동 등록</h4>
+                        <p>전통적인 방법입니다:</p>
+                        <ol>
+                            <li>북마크렛 표에서 <span class="highlight">"📋 코드 복사"</span> 버튼 클릭</li>
+                            <li>클립보드에 코드가 복사됩니다</li>
+                            <li>브라우저 북마크바에서 우클릭 → "새 북마크 추가" 선택</li>
+                            <li>이름: 원하는 이름 입력 (예: "테스트 계정1")</li>
+                            <li>URL: 복사한 코드 붙여넣기 (<code>Ctrl+V</code>)</li>
+                            <li>저장 버튼 클릭</li>
                         </ol>
                     </div>
                 </div>
@@ -416,7 +479,8 @@
                         <h4>Q1. 북마크렛이 작동하지 않아요</h4>
                         <p>다음 사항을 확인해보세요:</p>
                         <ul>
-                            <li>북마크 URL에 코드를 정확히 붙여넣었나요?</li>
+                            <li>드래그 앤 드롭으로 등록했다면 올바르게 등록되었는지 확인 (북마크 편집에서 URL 확인)</li>
+                            <li>코드 복사 방식이라면 전체 코드를 정확히 복사했는지 확인</li>
                             <li>로그인 페이지의 구조가 변경되지 않았나요?</li>
                             <li>브라우저 콘솔(F12)에서 에러 메시지를 확인해보세요</li>
                         </ul>
@@ -484,9 +548,9 @@
 
             <div style="margin-top: 30px; padding: 15px; background: #f8f9ff; border-radius: 8px; font-size: 13px; color: #666;">
                 <strong style="color: #667eea;">💡 Quick Tips</strong><br>
-                • HTML 저장: <code style="font-size: 11px;">Ctrl+S</code><br>
+                • 북마크 등록: 드래그가 제일 쉬워요!<br>
                 • 자동 감지 실패 → 🎯 직접 선택<br>
-                • 엑셀 또는 수동 입력 가능
+                • HTML 파일로 일괄 내보내기 가능
             </div>
         </aside>
     </div>
